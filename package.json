@@ -1,0 +1,22 @@
+{
+  "name": "poster-ratings-overlay",
+  "version": "0.1.0",
+  "description": "Stremio için IMDb, Rotten Tomatoes ve Metacritic puanlarını afişlerin üstüne bindiren eklenti sunucusu.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:silent": "STARTUP_SILENT=1 node src/index.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "stremio",
+    "addon",
+    "ratings",
+    "imdb",
+    "rotten-tomatoes",
+    "metacritic"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs"
+}

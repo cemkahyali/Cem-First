@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  addon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      PORT: ${PORT:-7000}
+      OMDB_API_KEY: ${OMDB_API_KEY:-}
+    ports:
+      - "${HOST_PORT:-7000}:${PORT:-7000}"
+    restart: unless-stopped
