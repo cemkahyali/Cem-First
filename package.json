@@ -1,0 +1,24 @@
+{
+  "name": "stremio-ratings-overlay",
+  "version": "1.0.0",
+  "description": "Stremio add-on that overlays IMDb, Rotten Tomatoes, and Metacritic scores on posters.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node scripts/health-check.js"
+  },
+  "keywords": [
+    "stremio",
+    "addon",
+    "ratings",
+    "imdb",
+    "rotten tomatoes",
+    "metacritic"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "stremio-addon-sdk": "^1.7.4"
+  }
+}
