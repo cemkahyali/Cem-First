@@ -1,0 +1,213 @@
+:root {
+  --bg-color: #f5f7fb;
+  --primary-color: #5a67d8;
+  --primary-dark: #434190;
+  --text-color: #1a202c;
+  --muted-color: #4a5568;
+  --border-radius: 12px;
+  --card-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: min(960px, 92vw);
+  margin: 0 auto;
+}
+
+.app-header {
+  background: white;
+  padding: 2.5rem 0;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  color: var(--muted-color);
+  font-size: 1rem;
+}
+
+main.container {
+  flex: 1 0 auto;
+  padding-bottom: 2rem;
+}
+
+.app-footer {
+  background: white;
+  padding: 1rem 0;
+  box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.06);
+  margin-top: auto;
+}
+
+.search-panel {
+  background: white;
+  padding: 1.75rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  margin-bottom: 1.5rem;
+}
+
+.search-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(67, 76, 94, 0.2);
+  font-size: 1rem;
+}
+
+.input-group button {
+  padding: 0.85rem 1.6rem;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.input-group button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.form-helper {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted-color);
+}
+
+.status {
+  min-height: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--muted-color);
+}
+
+.status.error {
+  color: #c53030;
+}
+
+.results-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: 3rem;
+}
+
+.result-card {
+  background: white;
+  padding: 1.4rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.result-card.best {
+  border: 2px solid var(--primary-color);
+}
+
+.result-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.result-card .retailer {
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+}
+
+.result-card .price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.result-card .price-current {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.result-card .price-original {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  color: var(--muted-color);
+}
+
+.result-card .price-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted-color);
+}
+
+.result-card .price-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.result-card .price-original .price-value {
+  font-size: 1.2rem;
+  text-decoration: line-through;
+}
+
+.result-card a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.result-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group button {
+    width: 100%;
+  }
+}
