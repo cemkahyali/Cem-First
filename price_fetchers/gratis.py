@@ -143,7 +143,7 @@ def search_product(query: str) -> PriceResult:
                 parent = price_element.parent
                 # Look for product name in parent or nearby elements
                 for selector in [".product-name", ".product-title", "[class*='name']", "[class*='title']"]:
-                    name_element = parent.find(class_=selector) if parent else None
+                    name_element = parent.select_one(selector) if parent else None
                     if name_element and name_element.get_text(strip=True):
                         name = name_element.get_text(strip=True)
                         break
