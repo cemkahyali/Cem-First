@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="search-panel">
+  <form id="search-form" class="search-form" autocomplete="off">
+    <label for="query">Ürün adı</label>
+    <div class="input-group">
+      <input
+        id="query"
+        name="query"
+        type="text"
+        placeholder="Örn. güneş kremi"
+        required
+      />
+      <button type="submit">Karşılaştır</button>
+    </div>
+    <p class="form-helper">
+      Karşılaştırma için ürün adını girin. Sistem belirtilen sitelerden en uygun fiyatı arar.
+    </p>
+  </form>
+</section>
+<section id="status" class="status" role="status" aria-live="polite"></section>
+<section id="results" class="results-grid" aria-label="Karşılaştırma sonuçları"></section>
+{% endblock %}

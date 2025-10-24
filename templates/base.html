@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fiyat Karşılaştırma</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container">
+        <h1>Fiyat Karşılaştırıcı</h1>
+        <p class="subtitle">Rossmann ve Gratis fiyatlarını tek ekranda karşılaştırın.</p>
+      </div>
+    </header>
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="app-footer">
+      <div class="container">
+        <small>Veriler ilgili sitelerin herkese açık arama sayfalarından çekilmektedir.</small>
+      </div>
+    </footer>
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </body>
+</html>
