@@ -1,6 +1,6 @@
 # Rossmann ve Gratis Fiyat Karşılaştırıcı
 
-Bu proje, Rossmann ve Gratis web sitelerindeki ürün fiyatlarını arayıp karşılaştıran basit bir Flask uygulamasıdır. Kullanıcı, ürün adını girdikten sonra sistem her iki siteden de fiyatları çekmeye çalışır ve en uygun sonucu öne çıkarır.
+Bu proje, Rossmann ve Gratis web sitelerindeki ürün fiyatlarını arayıp karşılaştıran basit bir Flask uygulamasıdır. Kullanıcı ürün adını girdikten sonra sistem her iki siteden de fiyatları çekmeye çalışır ve en uygun sonucu öne çıkarır.
 
 ## Özellikler
 
